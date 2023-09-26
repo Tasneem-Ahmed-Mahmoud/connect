@@ -34,7 +34,7 @@ $video=Video::first()->get(['video','id']);
     function gallery()
     {
 
-        $services=Service::with('projects')->get(['name', 'image', 'description','id']);
+        $services=Service::get(['name', 'image', 'description','id']);
         // dd($services[0]->projects[0]);
         return view('front.gallery',compact('services'));
     }
