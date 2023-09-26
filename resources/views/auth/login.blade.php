@@ -61,11 +61,11 @@
                             <div class="mb-3  float-end">
                                 <button type="submit" class="btn btn-light px-5" data-mdb-ripple-color="white" style="z-index: 1;">Login</button>
                             </div>
- @if (Route::has('password.request'))
-                                <div class="mt-3">
+ {{-- @if (Route::has('password.request'))
+                               <div class="mt-3">
                                     <a href="{{ route('password.request') }}">{{ __('Forgot your password?') }}</a>
-                                </div>
-                            @endif
+                                </div> 
+                            @endif --}}
                         </form>
                     </div>
                 </div>

@@ -8,30 +8,15 @@ use App\Http\Controllers\Dashboard\PartnerController;
 use App\Http\Controllers\Dashboard\ProjectController;
 use App\Http\Controllers\Dashboard\ServiceController;
 
-
-// Route::get('/profile', function () {
-//   return view('profile');
-// })->middleware(['auth', 'verified'])->name('profile');
-
-Route::middleware('auth')->group(function () {
+Route::middleware(['prevent-back-history','auth'])->group(function () {
   Route::get('/profiles', [ProfileController::class, 'edit'])->name('profile.edit');
   Route::patch('/profiles', [ProfileController::class, 'update'])->name('profile.update');
   Route::delete('/profiles', [ProfileController::class, 'destroy'])->name('profile.destroy');
+  Route::get('dashboard/home', function () { return view('dashboard/index');})->name('home');
 });
-
 require __DIR__.'/auth.php';
+Route::middleware(['prevent-back-history','auth'])->prefix('dashboard')->name('dashboard.')->group(function(){
 
-// dashboard home route =================================================
-Route::get('/admin', function () {
-    return view('dashboard/index');
-})->name('home');
-
-// 1-get contact page route =====================================
-Route::get('/contacts', function () {
-    return view('dashboard/contact/index');
-})->name('contact.index');
-
-Route::prefix('dashboard')->name('dashboard.')->group(function(){
   #################### services #################################
   Route::controller(serviceController::class)->prefix('services')->name('services.')->group(function () {
     Route::get('/', 'index')->name('index');

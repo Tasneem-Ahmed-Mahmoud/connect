@@ -23,9 +23,7 @@
   <!-- CSS Files -->
 
   <link href="{{ asset('dashboard/assets/css/style.css') }}" rel="stylesheet">
-  <style>
-
-  </style>
+  
 </head>
 <body class="g-sidenav-show  bg-gray-200">
 @include('sweetalert::alert')
