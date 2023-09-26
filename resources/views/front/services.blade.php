@@ -1,12 +1,12 @@
-    <!-- start of banner section ---------------------------------------------- -->
+<!-- start of banner section ---------------------------------------------- -->
     @extends('./front.master')
       @section('content')
     <section class="brand-banner ">
         <!-- <div class="container-with ght-img"> -->
-          <div class="container-with-right-img">
+          <div class="container-fluid">
           
             <div class="row justify-content-between align-items-center">
-              <div class="col-lg-5 ">
+              <div class="col-lg-5 ps-5 ">
             <div class="banner-content">
                 <h2   data-aos="fade-up" data-aos-duration="300" date-aos-delay="200"
                 data-aos-easing="ease-in-out"  >Brand<br> Activation</h2>
@@ -20,21 +20,29 @@
                     </div>
             </div></div>
 
+            
+
+            <div class="col-lg-5  right-side-img p-0">
+            <!-- <div class="banner-bg right-side-img  "> -->
+              <div class="bg-img w-100 d-flex justify-content-end ">
+              <img src="{{asset('front/assets/images/brand-banner-img.png')}}" alt="" class=' '>
+              </div>
+              
+                <!-- <div class="img-layer"> -->
+                  <img src="{{asset('front/assets/images/brand-img2.png')}}" alt="" class='img-layer'>
+                <!-- </div> -->
+            </div>
+
              <div class="col-lg-5 img-box     text-center d-flex justify-content-center align-items-center "  data-aos="fade-up" data-aos-duration="300" date-aos-delay="200"
              data-aos-easing="ease-in-out"  >
            
                 <img src="{{asset('front/assets/images/brand-img2.png')}}" alt="" class=" d-none">
               </div>
-            </div> 
+        
+            <!-- </div>  -->
+  </div>
      
 </div>
-            <div class="banner-bg right-side-img  ">
-                <img src="{{asset('front/assets/images/brand-banner-img.png')}}" alt="">
-                <div class="img-layer">
-                  <img src="{{asset('front/assets/images/brand-img2.png')}}" alt="">
-                </div>
-            </div>
-        
     </section>
 
     <!-- end o brand activation section --------------------------------------------------- -->

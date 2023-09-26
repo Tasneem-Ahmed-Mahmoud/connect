@@ -6,6 +6,7 @@ use App\Models\Service;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Partner;
+use App\Models\Video;
 
 class HomeController extends Controller
 {
@@ -13,10 +14,11 @@ class HomeController extends Controller
 
     function landing()
     {
+$video=Video::first()->get(['video','id']);
 
         $services = Service::get(['name', 'image', 'description']);
         $partners = Partner::get(['logo']);
-        return view('front.landing', compact('services', 'partners'));
+        return view('front.landing', compact('services', 'partners','video'));
     }
 
 
@@ -32,7 +34,8 @@ class HomeController extends Controller
     function gallery()
     {
 
-
-        return view('front.gallery');
+        $services=Service::with('projects')->get(['name', 'image', 'description','id']);
+        // dd($services[0]->projects[0]);
+        return view('front.gallery',compact('services'));
     }
 }

@@ -20,7 +20,7 @@ class ServeceSeeder extends Seeder
             ['id' => 4, 'name' => 'Personalized Gifts', 'description' => 'At Connect, we focus on providing unique promotional gifts specifically designed to help brands leave a lasting impression on their customers and partners. With our exceptional promotional gifts, they can highlight their logo or convey their message to the target audience.', 'image' => 'gifts-img.png'],
             ['id' => 5, 'name' => 'Exhibition Management', 'description' => 'CONNECT offers creative solutions for all trade show needs to participate in local, regional and global forums, from planning and design to execution and management. Engage partners and customers with your brand.', 'image' => 'mang-bg.png'],
             ['id' => 6, 'name' => 'Event Management', 'description' => 'We have a cohesive team with experience in managing all types of marketing initiatives. Whether you are planning a business event, a conference or a marketing event, we are the ideal choice to create a seamless and memorable experience.', 'image' => 'event-img.png'],
-            ['id' => 7, 'name' => 'Managing Social Media Accounts', 'description' => 'We create marketing plans, create content of all kinds, manage pages and run advertising campaigns to improve your presence on digital platforms and reach your target audiences and customers.', 'image' => 'socila.jpeg']
+            ['id' => 7, 'name' => 'Managing Social Media Accounts', 'description' => 'We create marketing plans, create content of all kinds, manage pages and run advertising campaigns to improve your presence on digital platforms and reach your target audiences and customers.', 'image' => 'social.png']
         ];
         foreach ($services as $service) {
             Service::create([
